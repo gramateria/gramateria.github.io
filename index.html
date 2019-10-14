@@ -1,1 +1,54 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><title>Gramateria</title><link as=style href=/css/app.41c5c5bf.css rel=preload><link as=style href=/css/chunk-vendors.99e0e215.css rel=preload><link as=script href=/js/app.55f9e1e1.js rel=preload><link as=script href=/js/chunk-vendors.9c4f499f.js rel=preload><link href=/css/chunk-vendors.99e0e215.css rel=stylesheet><link href=/css/app.41c5c5bf.css rel=stylesheet></head><body><noscript><strong>We're sorry but Gramateria doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script type=text/javascript src=/js/chunk-vendors.9c4f499f.js></script><script type=text/javascript src=/js/app.55f9e1e1.js></script></body></html>
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><title>Gramateria</title><link as=style href=/css/app.41c5c5bf.css rel=preload><link as=style href=/css/chunk-vendors.99e0e215.css rel=preload><link as=script href=/js/app.55f9e1e1.js rel=preload><link as=script href=/js/chunk-vendors.9c4f499f.js rel=preload><link href=/css/chunk-vendors.99e0e215.css rel=stylesheet><link href=/css/app.41c5c5bf.css rel=stylesheet>
+   <style>
+        .alert-modal{
+            transition:all ease-in-out 0.4s;
+            border-radius: 6px;
+            position:fixed;
+            top:10%;
+            left:50%;
+            width:300px;
+            margin-left:-150px;
+            padding:20px;
+            box-shadow:0 3px 20px #ddd;
+            transform:translateY(-150%);
+        }
+        .cls-btn{
+            text-align:right;
+        }
+        .cls-btn button{
+            margin-top:-20px;
+            font-size:20px;
+            padding:10px;
+            border:0;
+            background:transparent;
+        }
+        .cls-btn button:hover{
+            cursor:pointer;
+        }
+        .cls-btn button:focus,
+        .cls-btn button:active{
+            outline:none;
+            box-shadow:none;
+        }
+    </style>
+  </head><body><noscript><strong>We're sorry but Gramateria doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script type=text/javascript src=/js/chunk-vendors.9c4f499f.js></script><script type=text/javascript src=/js/app.55f9e1e1.js></script>
+  <div class="alert-modal">
+        <div class="cls-btn"><button>x</button></div>
+        <div>If you're still using this (beta dashboard), please backup your data. As a re-written version of Gramateria will come up with a different database structure, I'll have to remove this old database in Nov 15th 2019.</div>
+      </div>
+
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const Mod = document.querySelector(".alert-modal");
+
+            setTimeout(e=>{
+                Mod.setAttribute("style","transform:translateY(0)");
+            },2000)
+
+            const Btn = document.querySelector(".cls-btn button");
+            Btn.addEventListener("click",e=>{
+                Mod.setAttribute("style","transform:translateY(-150%)");
+            })
+          })
+     </script>
+  </body></html>
