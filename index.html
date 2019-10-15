@@ -40,7 +40,9 @@
       </div>
 
       <script>
+          let once = localStorage.getItem("isone")||false;
           document.addEventListener('DOMContentLoaded', function() {
+            if(once){return}
             const Mod = document.querySelector(".alert-modal");
 
             setTimeout(e=>{
@@ -51,6 +53,7 @@
             Btn.addEventListener("click",e=>{
                 Mod.setAttribute("style","transform:translateY(-150%)");
             })
+            localStorage.setItem("isone",true);
           })
      </script>
   </body></html>
